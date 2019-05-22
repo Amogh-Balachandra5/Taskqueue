@@ -27,7 +27,7 @@ object taskLoader extends Context
       while (rs1.next) {
         var SourceName = rs1.getString("SourceName")
         var SourcePath = rs1.getString("SourcePath")
-        var ArchivePath = rs1.getString("ArchivePath")
+//        var ArchivePath = rs1.getString("ArchivePath")
         var FileSpec = rs1.getString("FileSpec")
         var DirectoryID = rs1.getInt("DirectoryID")
         var start = FileSpec.split("\\*")(0)
@@ -40,7 +40,7 @@ object taskLoader extends Context
           if (file_path.getName.startsWith(start) && file_path.getName.endsWith(end)) {
 
             var FileName = file_path.getName
-            var Archive_Path = ArchivePath
+//            var Archive_Path = ArchivePath
             var FilePath = file_path.toString
             var Status = 0
             val contentSummary : ContentSummary = fs.getContentSummary(file_path)
